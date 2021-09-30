@@ -35,30 +35,37 @@
    AWS_SECRET_ACCESS_KEY  
 
 
-7. Configure .env file with database details once environment has restarted  
+6. Configure .env file with database details once environment has restarted  
    SS_DATABASE_SERVER (Endpoint including the port number)  
    SS_DATABASE_USERNAME  
    SS_DATABASE_PASSWORD  
 
 
-5. Configure Software:  
+7. Configure Software:  
    Proxy Server: Apache  
    (restarts environment)  
 
 
-6. Zip and deploy 0.0.1. Will see 403 Forbidden on site after deployment.  
+8. Composer and Zip.
+   Run a `composer install` in the root `directory` to build the vendor directory.  
+   Zip and deploy 0.0.1. Will see 403 Forbidden on site after deployment.  
    To zip the project files, select the files while inside the root directory and zip.  
    Do not zip the main directory.  
 
 
-7. Configure Software:  
+9. Configure Software:  
    Document root: /public  
    (restarts environment)
 
 
-8. Done. Visit the site using the given URL for the environment.  
+10. Done. Visit the site using the given URL for the environment.  
    Note: You can also add all the environment variable to the Environment Configuration Software space and remove the .env file.  
    
+
+11. Remove the initial Environment create when creating the Application. 
+   Environments -> Select checkbox next to environment  
+   Under Actions, Terminate Environment  
+
    
 ## To test  
 1. After a successful deployment, some changes to the pages and files (uploads)  
