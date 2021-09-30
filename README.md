@@ -24,7 +24,18 @@
    Save. This will restart the environment and create the RDS  (database)  
 
 
-4. Configure .env file with database details once environment has restarted  
+4. Create a S3 bucket with full public access. Take note of the bucket name.  
+   Update the .env file with the details of the bucket.  
+   AWS_REGION  
+   AWS_BUCKET_NAME  
+
+
+5. Create a new IAM API Access User with full S3 Bucket access and update the .env file   
+   AWS_ACCESS_KEY_ID  
+   AWS_SECRET_ACCESS_KEY  
+
+
+7. Configure .env file with database details once environment has restarted  
    SS_DATABASE_SERVER (Endpoint including the port number)  
    SS_DATABASE_USERNAME  
    SS_DATABASE_PASSWORD  
@@ -45,7 +56,8 @@
    (restarts environment)
 
 
-8. Done. Visit the site using the 
+8. Done. Visit the site using the given URL for the environment.  
+   Note: You can also add all the environment variable to the Environment Configuration Software space and remove the .env file.  
    
    
 ## To test  
