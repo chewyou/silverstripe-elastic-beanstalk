@@ -67,18 +67,6 @@
    Environments -> Select checkbox next to environment  
    Under Actions, Terminate Environment  
 
-   
-## To test  
-1. After a successful deployment, some changes to the pages and files (uploads)  
-   Does another deployment remove the files that were uploaded? 
-   The reference to them might still be in the database, but the file itself might be removed  
-   **Result:** Yes. The files are removes, but the reference to them still exist.  
-   **Solution:** The deployment script will need to **copy** the _/assets_ directory to a temporary directory before the package/code is deployed, it will be moved back after deployment is completed.  
- 
-
-3. Software Environment Values. Can the values from the .env file be moved to these fields?  
-   **Result:** Yes.  
-   **Solution:** Update ReadMe to include this information so that the .env file does not get uploaded to any git repository 
 
 
 ## AWS JavaScript SDK Documentation  
