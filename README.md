@@ -46,7 +46,7 @@
    (restarts environment)  
 
 
-8. Composer and Zip.
+8. Composer and Zip.  
    Run a `composer install` in the root `directory` to build the vendor directory.  
    Zip and deploy 0.0.1. Will see 403 Forbidden on site after deployment.  
    To zip the project files, select the files while inside the root directory and zip.  
@@ -58,7 +58,8 @@
    (restarts environment)
 
 
-10. Done. Visit the site using the given URL for the environment.  
+10. Done. Almost.  
+   Visit the site using the given URL for the environment.  
    Note: You can also add all the environment variable to the Environment Configuration Software space and remove the .env file.  
    
 
