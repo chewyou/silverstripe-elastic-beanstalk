@@ -21,7 +21,7 @@
    5GB (or what is needed)  
    username  
    password  
-   Save. This will restart the environment and create the RDS  (database)  
+   Apply. This will restart the environment and create the RDS  (database)  
 
 
 4. Create a S3 bucket with full public access. Take note of the bucket name.  
@@ -47,10 +47,11 @@
 
 
 8. Composer and Zip.  
-   Run a `composer install` in the root `directory` to build the vendor directory.  
-   Zip and deploy 0.0.1. Will see 403 Forbidden on site after deployment.  
+   Run a `composer install` in the root directory to build the `vendor` directory.  
+   Zip and deploy. Will see 403 Forbidden on site after deployment.  
    To zip the project files, select the files while inside the root directory and zip.  
-   Do not zip the main directory.  
+   Do not zip the root directory itself.  
+   Name to something like `0.0.1.zip`. Could do `1.0.0.zip`?  
 
 
 9. Configure Software:  
@@ -58,15 +59,34 @@
    (restarts environment)
 
 
-10. Done. Almost.  
-   Visit the site using the given URL for the environment.  
-   Note: You can also add all the environment variable to the Environment Configuration Software space and remove the .env file.  
+10. Almost done.  
+    You can add all the environment variables to the Environment Configuration Software space and remove the .env file from your deployment package.  
+ ```text
+SS_DATABASE_CLASS="MySQLDatabase"
+SS_DATABASE_NAME="SS_WebApp"
+SS_DATABASE_SERVER=""
+SS_DATABASE_USERNAME=""
+SS_DATABASE_PASSWORD=""
+SS_DEFAULT_ADMIN_USERNAME=""
+SS_DEFAULT_ADMIN_PASSWORD=""
+
+# "live" or "dev"
+SS_ENVIRONMENT_TYPE="dev"
+
+AWS_REGION=""
+AWS_BUCKET_NAME=""
+AWS_ACCESS_KEY_ID=""
+AWS_SECRET_ACCESS_KEY=""
+```
    
 
 11. Remove the initial Environment create when creating the Application. 
    Environments -> Select checkbox next to environment  
    Under Actions, Terminate Environment  
 
+
+## Local Development  
+`composer install`, `dev/build` and run however you run php applications :)   
 
 
 ## AWS JavaScript SDK Documentation  

@@ -3,16 +3,12 @@
     "type": "silverstripe-recipe",
     "description": "The SilverStripe Framework Installer",
     "require": {
-        "php": "^7.1 || ^8",
+        "php": "^8",
         "silverstripe/recipe-plugin": "^1.2",
         "silverstripe/recipe-cms": "4.8.0@stable",
         "silverstripe/login-forms": "4.4.1@stable",
         "silverstripe/s3": "^1.1",
         "aws/aws-sdk-php": "3.195.2@stable"
-    },
-    "require-dev": {
-        "sminnee/phpunit": "^5.7",
-        "sminnee/phpunit-mock-objects": "^3.4.5"
     },
     "extra": {
         "resources-dir": "_resources",
