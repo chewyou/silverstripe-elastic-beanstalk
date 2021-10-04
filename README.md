@@ -52,6 +52,8 @@
    To zip the project files, select the files while inside the root directory and zip.  
    Do not zip the root directory itself.  
    Name to something like `0.0.1.zip`. Could do `1.0.0.zip`?  
+   If you have docker installed, you can run the following to spin up composer to run the install command.  
+   `docker run --rm --interactive --tty --volume $PWD:/app composer install`
 
 
 9. Configure Software:  
